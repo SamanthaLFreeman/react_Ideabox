@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './IdeaForm.css'
 
 class IdeaForm extends Component {
   constructor(props) {
@@ -6,7 +7,6 @@ class IdeaForm extends Component {
     this.state = {
       title: "",
       description: "",
-      id: Date.now()
     }
   }
 
@@ -15,8 +15,12 @@ class IdeaForm extends Component {
   }
   
   handleClick = (e) => {
+    const newIdea = {
+      id: Date.now(),
+      ...this.state
+    }
     e.preventDefault();
-    this.props.addIdea(this.state);
+    this.props.addIdea(newIdea);
     this.setState({
       title: "",
       description: ""
