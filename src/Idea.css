@@ -1,0 +1,7 @@
+.card {
+  background-color: aliceblue;
+  border: 1px dotted black;
+  height: 200px;
+  margin: 20px 0;
+  width: 300px;
+}
